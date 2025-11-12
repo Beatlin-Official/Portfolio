@@ -117,23 +117,17 @@ body {
 
 // RWD setting
 @mixin phone {
-    @media screen and(min-width: 480px) {
-        @content
+    @media screen and (min-width: 480px) {
+        @content;
     }
 }
-
-;
 @mixin tablet {
-    @media screen and(min-width: 720px) {
-        @content
+    @media screen and (min-width: 720px) {
+        @content;
     }
 }
-
-;
 @mixin desktop {
-    @media screen and(min-width: 1024px) {
-        @content
+    @media screen and (min-width: 1024px) {
+        @content;
     }
 }
-
-;

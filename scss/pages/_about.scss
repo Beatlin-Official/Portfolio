@@ -64,22 +64,34 @@
         @include desktop {
             margin-top: 12rem;
         }
-        &__card {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        &__box {
             border-top: 1px solid #000;
             border-bottom: 1px solid #000;
+        }
+        &__card {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 0.5rem 0;
-            @include tablet {
-                border-top: 2px solid #000;
-                border-bottom: 2px solid #000;
-            }
+            border-bottom: 1px solid #000;
             @include desktop {
                 padding: 1.5rem 0;
             }
+            @include tablet{
+                flex-direction: row;
+                .position{
+                    min-width: 280px;
+                }
+            }
+            &:last-of-type{
+                border-bottom: none;
+            }
             span {
                 font-weight: 400;
+            }
+            .position{
+                min-width: 280px;
             }
         }
     }
@@ -106,7 +118,7 @@
         @include tablet {
             font-size: 30px;
         }
-    }
+    }   
     p {
         @include tablet {
             font-size: 18px;
